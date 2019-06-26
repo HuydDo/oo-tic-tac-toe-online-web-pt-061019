@@ -51,8 +51,8 @@ class TicTacToe
       if  !position_taken?(input) && input.to_i.to_s == input
         input_to_index(input)
         valid_move?(input)
-        current_player
-        move(input.to_i-1)
+        # current_player
+        move(input.to_i-1,current_player)
         display_board
       else
         turn
@@ -109,6 +109,19 @@ class TicTacToe
     # else if the game was a draw
     #   tell the players it ended in a draw
     # end
+    # puts "Welcome to Tic Tac Toe!"
+   until over?
+     turn
+   end
+     if won?
+       puts "Congratulations #{winner}!" if won?
+       # binding.pry
+     else
+       puts "Cat's Game!"
+     end
+
+ end
+
   end
 
 end
