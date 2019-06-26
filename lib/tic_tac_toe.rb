@@ -1,5 +1,5 @@
 require 'pry'
-class TicTacToe(arg)
+class TicTacToe
 
   def initialize(board = nil)
     @board = board || Array.new(9," ")
